@@ -1,11 +1,11 @@
 @extends('layouts.app')
-
+@section('title','Edit category')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-4">
             <div class="card">
-                <div class="card-header">{{ __('Edit Category') }}</div>
+                <div class="card-header bg-success text-light text-center">{{ __('Edit Category') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))

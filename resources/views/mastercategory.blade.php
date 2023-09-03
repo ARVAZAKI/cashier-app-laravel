@@ -1,10 +1,11 @@
 @extends('layouts.app')
+@section('title','Category')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Master Category') }}</div>
+                <div class="card-header bg-success text-light text-center">{{ __('Master Category') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -35,7 +36,7 @@
         </div>
         <div class="col-md-4">
             <div class="card">
-                <div class="card-header">{{ __('Add Category') }}</div>
+                <div class="card-header bg-success text-light text-center">{{ __('Add Category') }}</div>
 
                 <div class="card-body">
                     @if(count($errors) > 0)

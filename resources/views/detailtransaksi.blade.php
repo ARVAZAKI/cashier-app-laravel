@@ -1,4 +1,5 @@
 @extends('layouts.app')
+@section('title','Transactions Detail')
 @section('content')
 
 <div class="container">
@@ -10,7 +11,7 @@
         </div> --}}
         <div class="col-md-9">
             <div class="card">
-                <div class="card-header text-center">{{ __('Detail Transaction') }}</div>
+                <div class="card-header text-center bg-success text-light text-center">{{ __('Detail Transaction') }}</div>
                 <div class="container">
                     <h6 class="mt-1">Date : {{ date('d F Y' , strtotime($detail->created_at)) }}</h6>
                     <h6>Served by : {{ $detail->user->name }}</h6>

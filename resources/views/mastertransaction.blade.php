@@ -1,13 +1,14 @@
 @extends('layouts.app')
+@section('title','Transaction')
 @section('content')
 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-7">
             <div class="card">
-                <div class="card-header">{{ __('Transaction') }}</div>
+                <div class="card-header bg-success text-light text-center">{{ __('Transaction') }}</div>
                 <div class="card-body">
-                    <table class="table table-responsive">
+                    <table class="table table-responsive-lg">
                         <thead>
                             <td>Nomor</td>
                             <td>Category</td>
@@ -36,7 +37,7 @@
                                 <td>
                                     <input type="hidden" name="item_id" value="{{ $item->id }}">
                                     <input type="hidden" name="qty" value="1">
-                                    <input type="submit" value="Add to cart" class="btn btn-sm btn-success text-light">
+                                    <button type="submit" class="btn btn-sm btn-success text-light">Add</button>
                                 </td>
                             </form>
 
@@ -49,7 +50,7 @@
         </div>
         <div class="col-md-5">
             <div class="card">
-                <div class="card-header">{{ __('Cart') }}</div>
+                <div class="card-header bg-success text-light text-center">{{ __('Cart') }}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -122,7 +123,6 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td></td>
                                 <td></td>
                                 <td></td>
                                 <td colspan="1">

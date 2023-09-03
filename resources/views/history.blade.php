@@ -1,11 +1,12 @@
 @extends('layouts.app')
+@section('title','History')
 @section('content')
 
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-7">
             <div class="card">
-                <div class="card-header text-center">{{ __('History Transaction') }}</div>
+                <div class="card-header text-center bg-success text-light">{{ __('History Transaction') }}</div>
                     <table class="table table-responsive">
                         <thead>
                             <td>Nomor</td>

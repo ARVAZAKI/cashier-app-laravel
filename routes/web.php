@@ -17,9 +17,7 @@ use App\Http\Controllers\TransactionController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
+
 Auth::routes();
 //route item
 Route::resource('/item',ItemController::class)->middleware('auth');
@@ -32,4 +30,4 @@ Route::resource('/transaction',TransactionController::class)->middleware('auth')
 Route::get('/history',[TransactionController::class, 'history'])->middleware('auth');
 Route::post('/transaction/checkout', [TransactionController::class, 'checkout'])->name('transaction.checkout')->middleware('auth');
 //route home
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home')->middleware('auth');
